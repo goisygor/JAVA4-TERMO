@@ -1,0 +1,19 @@
+{
+  "usuarios": [
+    {
+      "nome": "Maria",
+      "idade": 22,
+      "endereco": "Rua Senai",
+      "id": "e19b"
+    },
+    {
+      "nome": "João",
+      "idade": 20,
+      "endereco": "Rua Brasil",
+      "id": "2259"
+    }
+  ],
+  "produtos":[
+    
+  ]
+}
