@@ -55,10 +55,30 @@ Bibliotecas: Jackson ou Gson para manipulação de JSON.
 
 
 DIAGRAMAS DE CLASSE
-![alt text](image-1.png)
+![alt text](img/Diagramas/image-1.png)
 
 DIAGRAMAS DE FLUXO 
-![alt text](image.png)
+![alt text](img/Diagramas/image.png)
 
+<IMAGENS DOS MÉTODOS GET, POST, PUT, DELETE>
 
+1° Máquinas
 
+![alt text](img/GETmaquinas/GETmaquinas.png)
+![alt text](img/GETmaquinas/POSTmaquinas.png)
+![alt text](img/GETmaquinas/PUTmaquinas.png)
+![alt text](img/GETmaquinas/DELETEmaquinaspng.png)
+
+2° Hitorico Manutenção
+![alt text](img/GEThistoricoManutencao/GEThitoricoManutencao.png)
+![alt text](img/GEThistoricoManutencao/POSThistoricoManutencao.png)
+
+3° Falhas 
+![alt text](img/GETfalhas/GETfalhas.png)
+![alt text](img/GETfalhas/POSTfalhas.png)
+
+4° Técnicos
+![alt text](img/GETtecnicos/GETtecnicos.png)
+![alt text](img/GETtecnicos/POSTtecnicos.png)
+![alt text](img/GETtecnicos/DELETEtecnicos.png)
+![alt text](img/GETtecnicos/DELETEtecnicos.png)
