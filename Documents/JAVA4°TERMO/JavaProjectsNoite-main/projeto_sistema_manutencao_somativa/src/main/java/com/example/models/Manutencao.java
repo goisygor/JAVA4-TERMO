@@ -12,6 +12,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Manutencao {
+    public Manutencao(String string, int int1, String string2, String string3, String string4, String string5,
+            String string6, String string7) {
+        //TODO Auto-generated constructor stub
+    }
     private String id;
     private Long maquinaID;
     private LocalDate data;
