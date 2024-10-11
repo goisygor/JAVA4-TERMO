@@ -1,42 +1,36 @@
 package com.example.api;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import com.example.models.Manutencao;
 
-
 public class ManutencaoAPI {
-
-
-    public static List<Manutencao> getmanutencoes() {
-        String json = ApiConnection.getData("Manutencao");
-        List<Manutencao> manutencoes = new ArrayList<>();
-
+    public static List<Manutencao> getManutencaos() {
+        String json = ApiConnection.getData("historicoManutencao");
+        List<Manutencao> manutencaos = new ArrayList<>();
 
         if (json != null) {
             JSONArray jsonArray = new JSONArray(json);
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-                Manutencao manutencao = new Manutencao(
-                    jsonObject.getString("id"),
-                    jsonObject.getInt("maquinaID"),
-                    jsonObject.getString("data"),
-                    jsonObject.getString("tipo"),
-                    jsonObject.getString("pecasTrocadas"),
-                    jsonObject.getString("tempoDeParada"),
-                    jsonObject.getString("tecnicoID"),
-                    jsonObject.getString("obervacoes")
-                );
-                manutencoes.add(manutencao);
+                
+                // Verificação de campos
+                String id = jsonObject.optString("id", "");
+                long maquinaId = jsonObject.optLong("maquinaId", 0);
+                LocalDate data = LocalDate.parse(jsonObject.optString("data", LocalDate.now().toString()));
+                String tipo = jsonObject.optString("tipo", "");
+                String pecasTrocadas = jsonObject.optString("pecasTrocadas", "");
+                long tempoDeParada = jsonObject.optLong("tempoDeParada", 0);
+                String tecnicoId = jsonObject.optString("tecnicoId", "");
+                String observacoes = jsonObject.optString("observacoes", "");
+
+                Manutencao manutencao = new Manutencao(id, maquinaId, data, tipo, pecasTrocadas, tempoDeParada, tecnicoId, observacoes);
+                manutencaos.add(manutencao);
             }
         }
-        return manutencoes;
+        return manutencaos;
     }
 }
-
-
-

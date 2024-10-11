@@ -1,24 +1,17 @@
-
-
 package com.example.api;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 import com.example.models.Tecnico;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
-
-
 
 public class TecnicoAPI {
 
     public static List<Tecnico> getTecnicos() {
-        String json = ApiConnection.getData("Tecnicos");
+        String json = ApiConnection.getData("tecnicos");
         List<Tecnico> tecnicos = new ArrayList<>();
-
 
         if (json != null) {
             JSONArray jsonArray = new JSONArray(json);
@@ -36,6 +29,3 @@ public class TecnicoAPI {
         return tecnicos;
     }
 }
-
-
-

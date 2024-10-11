@@ -3,6 +3,9 @@ package com.example.View;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+
+
+
 import java.awt.BorderLayout;
 
 public class SistemaManutencaoGUI extends JFrame {
@@ -22,7 +25,7 @@ public class SistemaManutencaoGUI extends JFrame {
            //inicianlização dos paineis
     painelMaquinas = new MaquinasPanel();
     painelManutencao = new ManutencaoPanel();
-    painelFalhas = new FalhasPanel();
+    painelFalhas = new FalhaPanel();
     painelTecnicos = new TecnicosPanel();
 
     // criar meu Tabbed Pane

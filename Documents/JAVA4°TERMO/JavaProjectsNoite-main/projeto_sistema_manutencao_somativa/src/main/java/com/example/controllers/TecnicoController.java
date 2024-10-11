@@ -3,7 +3,6 @@ package com.example.controllers;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.api.MaquinaAPI;
 import com.example.api.TecnicoAPI;
 import com.example.models.Tecnico;
 
@@ -14,7 +13,7 @@ public class TecnicoController {
         tecnicos = new ArrayList<>();
     }
 
-    // métodos - CRUD
+    // Métodos - CRUD
 
     public void createTecnico(Tecnico tecnico) {
         this.tecnicos.add(tecnico);
@@ -24,13 +23,18 @@ public class TecnicoController {
         tecnicos = TecnicoAPI.getTecnicos();
         return tecnicos;
     }
-    // UPDATE (Atualiza uma máquina pelo id)
-   public void updateTecnico(int posicao, Tecnico tecnico){
-    tecnicos.set(posicao, tecnico);
-   }
 
-    // DELETE (Remove uma máquina pelo id)
+    // UPDATE (Atualiza um técnico pelo índice)
+    public void updateTecnico(int posicao, Tecnico tecnico) {
+        if (posicao >= 0 && posicao < tecnicos.size()) {
+            tecnicos.set(posicao, tecnico);
+        }
+    }
+
+    // DELETE (Remove um técnico pelo índice)
     public void deleteTecnico(int posicao) {
-        tecnicos.remove(posicao);
+        if (posicao >= 0 && posicao < tecnicos.size()) {
+            tecnicos.remove(posicao);
+        }
     }
 }
