@@ -35,7 +35,7 @@ public class ApiConnection {
     }
 
     // POST
-    public void postData(String endpoint, String inputData) {
+    public static void postData(String endpoint, String inputData) {
         try {
             URL url = new URL(API_URL + endpoint);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
