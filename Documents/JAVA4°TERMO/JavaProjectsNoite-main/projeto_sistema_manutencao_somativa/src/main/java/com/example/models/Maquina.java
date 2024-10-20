@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -23,5 +22,4 @@ public class Maquina {
     private String localizacao;
     private String detalhes;
     private String manual;
-
 }
