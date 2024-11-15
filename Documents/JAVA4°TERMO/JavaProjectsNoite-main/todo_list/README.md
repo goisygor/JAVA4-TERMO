@@ -61,3 +61,6 @@ DIAGRAMA DE CLASSE
 
 DIAGRAMA DE FLUXO CADASTRO
 ![alt text](image-1.png)
+
+SCRIPT BANCO DE DADOS
+![alt text](image-2.png)
